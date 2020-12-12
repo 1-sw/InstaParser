@@ -2,32 +2,10 @@ import os,time
 from instaclient import InstaClient
 from instaclient.errors import *
 
-#print(str(os.getcwd())+"/var/chromedriver")
-#->/home/zhaba/Public/github/InstaParser/var/chromedriver
-#Also run it: /home/zhaba/Public/github/InstaParser/var/chromedriver
-#client = InstaClient("/home/zhaba/Public/github/InstaParser/var/chromedriver")
-
-
-print("/home/zhaba/Desktop/chromedriver:")
-print(os.path.isfile("/home/zhaba/Desktop/chromedriver"))
-
-print(os.getcwd()+"var/chromedriver:")
-print(os.path.isfile(os.getcwd()+"var/chromedriver"))
-
-print("/home/zhaba/Public/github/InstaParser/var/chromedriver")
-print(os.path.isfile("/home/zhaba/Public/github/InstaParser/var/chromedriver"))
-
-
-#/home/zhaba/Desktop/chromedriver:
-#True
-#/home/zhaba/Public/github/InstaParservar/chromedriver:
-#False
-#/home/zhaba/Public/github/InstaParser/var/chromedriver
-#True
-
+DRIVER=str(os.getcwd()+"/var/chromedriver")
 
 def connect(username,pwd):
-  client = InstaClient("/home/zhaba/Desktop/chromedriver")
+  client = InstaClient(driver_path=DRIVER)
   try:
     client.login(username=username, password=pwd)
   except VerificationCodeNecessary:
@@ -40,4 +18,4 @@ def connect(username,pwd):
       code = input('Enter the security code that was sent to you via SMS: ')
   client.input_security_code(code)
 
-#connect("sdf","asfasdfsaf")
+connect("testd_eveloper","githh9tny3tvtwyc")
