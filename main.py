@@ -6,7 +6,9 @@ from instaclient.errors import *
 #->/home/zhaba/Public/github/InstaParser/var/chromedriver
 #Also run it: /home/zhaba/Public/github/InstaParser/var/chromedriver
 
-client = InstaClient(str(os.getcwd())+"/var/chromedriver")
+os.chdir("/home/zhaba/Public/github/InstaParser/var/")
+client = InstaClient("chromedriver")
+
 
 def connect(username,pwd):
   try:
@@ -21,4 +23,4 @@ def connect(username,pwd):
       code = input('Enter the security code that was sent to you via SMS: ')
   client.input_security_code(code)
 
-connect("","")
+connect("sdf","asfasdfsaf")
