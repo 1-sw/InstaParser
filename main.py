@@ -16,7 +16,7 @@ def connect(username,pwd):
       code = input('Enter the security code that was sent to you via email: ')
     else:
       code = input('Enter the security code that was sent to you via SMS: ')
-  client.input_security_code(code)
+    client.input_security_code(code)
 
 
 def main():
