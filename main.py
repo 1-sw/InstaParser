@@ -5,12 +5,10 @@ from instaclient.errors import *
 #print(str(os.getcwd())+"/var/chromedriver")
 #->/home/zhaba/Public/github/InstaParser/var/chromedriver
 #Also run it: /home/zhaba/Public/github/InstaParser/var/chromedriver
-
-os.chdir("/home/zhaba/Public/github/InstaParser/var/")
-client = InstaClient("chromedriver")
-
+#client = InstaClient("/home/zhaba/Public/github/InstaParser/var/chromedriver")
 
 def connect(username,pwd):
+  client = InstaClient("/home/zhaba/Public/github/InstaParser/var/chromedriver")
   try:
     client.login(username=username, password=pwd)
   except VerificationCodeNecessary:
