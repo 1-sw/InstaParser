@@ -1,4 +1,4 @@
-import os,time
+import os,time,config
 from instaclient import InstaClient
 from instaclient.errors import *
 
@@ -18,4 +18,7 @@ def connect(username,pwd):
       code = input('Enter the security code that was sent to you via SMS: ')
   client.input_security_code(code)
 
-connect("","")
+
+def main():
+  connect(config.LOGIN,config.PASSWORD)
+main()
