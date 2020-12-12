@@ -18,4 +18,4 @@ def connect(username,pwd):
       code = input('Enter the security code that was sent to you via SMS: ')
   client.input_security_code(code)
 
-connect("testd_eveloper","githh9tny3tvtwyc")
+connect("","")
