@@ -11,7 +11,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 driver_path = str(os.getcwd()+"/var/chromedriver")
 driver = webdriver.Chrome(driver_path)
 
@@ -30,7 +29,7 @@ def send_direct_message(usernames=""):
 
 def connect(username,pwd):
   client = InstaClient(driver_path=driver_path)
-  print(BaseProfile.from_username("MyUsername"))
+  print(BaseProfile.from_username("testd_eveloper"))
   #
   try:
     client.login(username=username, password=pwd)
