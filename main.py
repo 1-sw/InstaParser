@@ -30,6 +30,7 @@ def send_direct_message(usernames=""):
 
 def connect(username,pwd):
   client = InstaClient(driver_path=driver_path)
+  print(BaseProfile.from_username("MyUsername"))
   try:
     client.login(username=username, password=pwd)
   except VerificationCodeNecessary:
