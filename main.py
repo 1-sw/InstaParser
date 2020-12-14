@@ -15,6 +15,17 @@ from selenium.webdriver.support.wait import WebDriverWait
 driver_path = str(os.getcwd()+"/var/chromedriver")
 driver = webdriver.Chrome(driver_path)
 
+def send_direct_message(usernames=""):
+        #It doecnt work
+        direct_message_button = ""
+        print("Отправляем сообщение...")
+        #direct_message = driver.find_element_by_xpath(direct_message_button).click()
+        driver.find_element_by_link_text("Direct").click()
+        time.sleep(random.randrange(2, 4))
+
+#  selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element:
+#  {"method":"xpath","selector":"/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[2]/a"}
+# (Session info: chrome=87.0.4280.88)
 
 
 def connect(username,pwd):
@@ -33,7 +44,12 @@ def connect(username,pwd):
 
 
 def main():
+  print("1")
   connect(config.LOGIN,config.PASSWORD)
   time.sleep(10)
+  print("2")
+  send_direct_message("1_sw_git")
+  time.sleep(10)
+  print("3")
   driver.close()
 main()
