@@ -1,2 +1,2 @@
 # InstaParser
-This is one of my freelance pojects
+This is one of my freelance projects
